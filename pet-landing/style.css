@@ -1,0 +1,250 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 15px;
+  line-height: 26px;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: .5rem;
+  line-height: 1.2;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .wrapper {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1140px;
+  }
+}
+
+.button {
+  padding: 8px 12px;
+  background: #91781f;
+  border-radius: 50px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.row, .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row.end, .col.end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.row.spaceBetween, .col.spaceBetween {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row.vertical-center, .col.vertical-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row.horizontal-center, .col.horizontal-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 62px;
+  padding: 15px;
+  border-bottom: 1px solid #4950570f;
+  background-color: rgba(0, 0, 0, 0.07);
+  z-index: 999;
+}
+
+.nav .logo {
+  height: auto;
+  width: 200px;
+}
+
+.nav .logo img {
+  position: absolute;
+  top: -15px;
+  width: 200px;
+}
+
+.nav .logo .black {
+  display: none;
+}
+
+.nav .menu .list-index li {
+  list-style-type: none;
+}
+
+.nav .menu .list-index .index {
+  color: #fff;
+  margin-left: 15px;
+}
+
+.nav .menu .list-index .first {
+  margin-left: 0px;
+}
+
+.nav .menu .appointment {
+  margin: 0px 6px;
+}
+
+.nav.fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero .slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero .slider .bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.hero .slider .bg-img.img01 {
+  background-image: url(img/hero/slider-1.jpg);
+}
+
+.hero .slider .bg-img.img02 {
+  background-image: url(img/hero/slider-3.jpg);
+}
+
+.hero .slider .caption h1 {
+  font-size: 110px;
+  line-height: 87px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 1;
+  visibility: visible;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.hero .slider .caption h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.hero .slider .caption h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Rajdhani', sans-serif;
+  color: #fff;
+}
+
+.hero .slider::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background-image: url(img/hero/header-after.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gg-calendar,
+.gg-calendar::before {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.gg-calendar {
+  position: relative;
+  -webkit-transform: scale(var(--ggs, 1));
+          transform: scale(var(--ggs, 1));
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-top: 4px solid;
+  border-radius: 3px;
+}
+
+.gg-calendar::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  border-radius: 3px;
+  left: 2px;
+  background: currentColor;
+  height: 2px;
+  top: 2px;
+}
+/*# sourceMappingURL=style.css.map */
