@@ -24,6 +24,31 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
+h1, h2, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: normal;
+  color: #333;
+  line-height: 1.5;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.3;
+  color: #333;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+h5 {
+  color: #91781f;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 0.7px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -60,6 +85,33 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   border-color: transparent;
   cursor: pointer;
+}
+
+.intro {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list .card {
+  text-align: center;
+  padding: 0px 15px;
+}
+
+.fadeInLeft {
+  visibility: visible;
+  -webkit-animation: fadeInLeft 3.2s;
+          animation: fadeInLeft 3.2s;
 }
 
 .row, .col {
@@ -133,13 +185,12 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-.nav .menu .list-index li {
-  list-style-type: none;
+.nav .menu .list-index .index {
+  margin-left: 15px;
 }
 
-.nav .menu .list-index .index {
+.nav .menu .list-index .index a {
   color: #fff;
-  margin-left: 15px;
 }
 
 .nav .menu .list-index .first {
@@ -177,11 +228,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero .slider .bg-img.img01 {
-  background-image: url(img/hero/slider-1.jpg);
+  background-image: url(../img/hero/slider-1.jpg);
 }
 
 .hero .slider .bg-img.img02 {
-  background-image: url(img/hero/slider-3.jpg);
+  background-image: url(../img/hero/slider-3.jpg);
 }
 
 .hero .slider .caption h1 {
@@ -218,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 30%;
   bottom: 0;
-  background-image: url(img/hero/header-after.png);
+  background-image: url(../img/hero/header-after.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -330,6 +381,23 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
+}
+
+.services {
+  width: 100%;
+  padding: 100px 0px;
+}
+
+.services .card {
+  max-width: 33.3333%;
+}
+
+.services i {
+  font-size: 70px;
+}
+
+.index, .card {
+  list-style-type: none;
 }
 
 .gg-calendar,

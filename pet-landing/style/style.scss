@@ -19,6 +19,28 @@ h1,h2,h3,h4,h5,h6{
     font-size: .5rem;
     line-height: 1.2;
 }
+h1,h2,h4,h5,h6{
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.5;
+}
+h2{
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.3;
+    color: #333;
+    font-family: 'Rajdhani', sans-serif;
+}
+h5{
+    color: #91781f;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 0.7px;
+    font-family: 'Rajdhani', sans-serif;
+}
 .wrapper{
     @media (min-width: 576px){
         max-width: 540px;
@@ -43,6 +65,23 @@ h1,h2,h3,h4,h5,h6{
     border-color: transparent;
     cursor: pointer;
 }
+.intro{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 75px;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    .card{
+        text-align: center;
+        padding: 0px 15px;
+    }
+}
+.fadeInLeft{
+    visibility: visible;
+    animation: fadeInLeft 3.2s;
+}
 .row,.col{
     display: flex;
     &.end{
@@ -64,6 +103,7 @@ h1,h2,h3,h4,h5,h6{
 .col{
     flex-direction: column;
 }
+
 .nav{
     position: absolute;
     top: 0;
@@ -89,12 +129,11 @@ h1,h2,h3,h4,h5,h6{
     .menu{
         // padding: 16px 0px;
         .list-index{
-            li{
-                list-style-type: none;
-            }
             .index{
-                color: #fff;
                 margin-left: 15px;
+                a{
+                    color: #fff;
+                }
             }
             .first{
                 margin-left: 0px;
@@ -123,10 +162,10 @@ h1,h2,h3,h4,h5,h6{
             background-size: cover;
             background-position: center;
             &.img01{
-                background-image: url(img/hero/slider-1.jpg);
+                background-image: url(../img/hero/slider-1.jpg);
             }
             &.img02{
-                background-image: url(img/hero/slider-3.jpg);
+                background-image: url(../img/hero/slider-3.jpg);
             }
         }
         .caption{
@@ -162,7 +201,7 @@ h1,h2,h3,h4,h5,h6{
             width: 100%;
             height: 30%;
             bottom: 0;
-            background-image: url(img/hero/header-after.png);
+            background-image: url(../img/hero/header-after.png);
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -216,6 +255,19 @@ h1,h2,h3,h4,h5,h6{
         width: 100%;
         transform: translateX(0px);
     }
+}
+.services{
+    width: 100%;
+    padding: 100px 0px;
+    .card{
+        max-width: 33.3333%;
+    }
+    i{
+        font-size: 70px;
+    }
+}
+.index,.card{
+    list-style-type: none;
 }
 .gg-calendar,
 .gg-calendar::before {
