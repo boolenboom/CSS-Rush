@@ -19,8 +19,13 @@ body {
   font-weight: normal;
 }
 
+section {
+  width: 100%;
+  padding: 100px 0px;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-size: .5rem;
+  margin-bottom: .5rem;
   line-height: 1.2;
 }
 
@@ -38,6 +43,10 @@ h2 {
   line-height: 1.3;
   color: #333;
   font-family: 'Rajdhani', sans-serif;
+}
+
+h3 {
+  font-size: 1.75rem;
 }
 
 h5 {
@@ -91,6 +100,20 @@ h5 {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.intro.reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .list {
@@ -383,17 +406,75 @@ h5 {
   }
 }
 
-.services {
-  width: 100%;
-  padding: 100px 0px;
-}
-
 .services .card {
+  width: 33.3333%;
   max-width: 33.3333%;
 }
 
 .services i {
   font-size: 70px;
+}
+
+.pricing {
+  background-color: #0a0a0a;
+  position: relative;
+}
+
+.pricing .intro-title {
+  text-transform: capitalize;
+}
+
+.pricing .card {
+  background-color: #000;
+  padding: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  width: 33.3333%;
+  max-width: 33.3333%;
+}
+
+.pricing .card .title {
+  text-align: start;
+  color: #91781f;
+}
+
+.pricing .card .description {
+  letter-spacing: 1px;
+}
+
+.pricing .card .description + .description {
+  border-top: 1px dashed #fff;
+}
+
+.pricing span {
+  color: #91781f;
+}
+
+.pricing * {
+  color: #fff;
+}
+
+.pricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-top: 31px dashed #fff;
+}
+
+.pricing::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-top: 31px dashed #fff;
 }
 
 .index, .card {
