@@ -16,6 +16,7 @@ body {
   line-height: 26px;
   color: #333;
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -161,6 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero .slider {
+  overflow: hidden;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -171,6 +173,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100vh;
   background-size: cover;
+  background-position: center;
 }
 
 .hero .slider .bg-img.img01 {
@@ -210,6 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero .slider::after {
   content: '';
+  z-index: 5;
   position: absolute;
   width: 100%;
   height: 30%;
@@ -217,6 +221,115 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(img/hero/header-after.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.slider-active .img01 {
+  -webkit-animation: moveOut 6.4s;
+          animation: moveOut 6.4s;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.slider-active .img02 {
+  -webkit-animation: moveOut 6.4s;
+          animation: moveOut 6.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.slider-active .slider-text {
+  -webkit-animation: fadeInLeft 3.2s;
+          animation: fadeInLeft 3.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes moveOut {
+  37.5% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  49.9% {
+    z-index: 2;
+  }
+  50% {
+    z-index: -1;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  51% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    width: 100%;
+  }
+  87.5% {
+    width: 60%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    width: 100%;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes moveOut {
+  37.5% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  49.9% {
+    z-index: 2;
+  }
+  50% {
+    z-index: -1;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  51% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    width: 100%;
+  }
+  87.5% {
+    width: 60%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    width: 100%;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
 .gg-calendar,
