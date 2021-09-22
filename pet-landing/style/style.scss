@@ -570,6 +570,54 @@ h5{
         transform: translateX(-200%);
     }
 }
+.blog{
+    background-color: #fff6f6;
+    .card{
+        background-color: #fff;
+        box-shadow: 0px 5px 30px 0px #9492f526;
+        padding: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 30px;
+        width: 33.3333%;
+        max-width: 33.3333%;
+        .img-frame{
+            width: 100%;
+            overflow: hidden;
+            font-size: 100px;
+            img{
+                transition: all .5s;
+            }
+        }
+        .content{
+            padding: 30px 25px;
+        }
+        .title{
+            text-align: start;
+            color: #91781f;
+            margin-bottom: 10px;
+        }
+        .text{
+            text-align: start;
+            font-weight: 300;
+        }
+        .info{
+            background-color: #91781f;
+            border-radius: 20px;
+            color: #fff;
+            .date{
+                padding-left: 15px;
+            }
+            .readStory{
+                padding-right: 15px;
+                color: #fff;
+            }
+        }
+        &:hover .img-frame>img{
+            transform: rotate(4deg) scale(1.2);
+        }
+    }
+}
 .gg-calendar,
 .gg-calendar::before {
     display: block;
