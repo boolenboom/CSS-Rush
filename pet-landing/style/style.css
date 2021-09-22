@@ -979,6 +979,45 @@ h5 {
           transform: rotate(4deg) scale(1.2);
 }
 
+.reservation {
+  background-image: url(../img/reservation/reservation-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.reservation::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .6;
+}
+
+.reservation * {
+  color: #fff;
+}
+
+.reservation .content-intro {
+  margin-bottom: 10px;
+}
+
+.reservation .phone {
+  background-color: #91781f;
+  border-radius: 50px;
+  padding: 6px 35px;
+}
+
+.reservation .phone h3 {
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
 .gg-calendar,
 .gg-calendar::before {
   display: block;
