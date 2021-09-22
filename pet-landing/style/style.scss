@@ -651,6 +651,45 @@ h5{
         }
     }
 }
+.footer{
+    padding: 50px 0px;
+    background-color: #040404;
+    position: relative;
+    z-index: 1;
+    border-top: 31px dashed #fff;
+    .option{
+        width: 100%;
+        margin-bottom: 30px;
+        .item{
+            width: 33%;
+            .content{
+                li,a{
+                    color: #555;
+                }
+                li{
+                    margin-top: 7px;
+                }
+                i{
+                    color: #91781f;
+                }
+            }
+        }
+        .title{
+            color: #91781f;
+        }
+    }
+    .policy{
+        *{
+            color: #fff;
+        }
+        a{
+            padding: 0px 8px;
+        }
+        a+a{
+            border-left: 1px solid #fff;
+        }
+    }
+}
 .gg-calendar,
 .gg-calendar::before {
     display: block;
@@ -675,3 +714,26 @@ h5{
     height: 2px;
     top: 2px
 }
+.gg-mail,
+.gg-mail::after {
+    display: block;
+    box-sizing: border-box;
+    height: 14px;
+    border: 2px solid
+}
+.gg-mail {
+    overflow: hidden;
+    transform: scale(var(--ggs,1));
+    position: relative;
+    width: 18px;
+    border-radius: 2px
+}
+.gg-mail::after {
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    width: 14px;
+    transform: rotate(-45deg);
+    bottom: 3px;
+    left: 0
+} 
