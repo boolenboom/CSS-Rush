@@ -171,6 +171,20 @@ h5 {
   padding: 0px 15px;
 }
 
+@media (min-width: 576px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
 .blackSection {
   background-color: #0a0a0a;
   position: relative;
@@ -238,7 +252,7 @@ h5 {
           justify-content: center;
 }
 
-.row.wrap, .col.wrap {
+.wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -491,11 +505,6 @@ h5 {
   }
 }
 
-.services .card {
-  width: 33.3333%;
-  max-width: 33.3333%;
-}
-
 .services i {
   font-size: 70px;
 }
@@ -505,13 +514,14 @@ h5 {
 }
 
 .pricing .card {
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.pricing .card .group {
   background-color: #000;
   padding: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 30px;
-  width: 33.3333%;
-  max-width: 33.3333%;
+  margin: 0px 15px;
 }
 
 .pricing .card .title {
