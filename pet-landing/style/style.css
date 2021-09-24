@@ -16,7 +16,8 @@ body {
   line-height: 26px;
   color: #333;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: normal;
+  font-weight: 300;
+  scroll-behavior: smooth;
 }
 
 section {
