@@ -5,7 +5,7 @@
     text-decoration: none;
 }
 @mixin phone() {
-    @media (min-width: 576px){
+    @media (max-width: 767px){
         @content;
     }
 }
@@ -300,55 +300,60 @@ h5{
         }
     }
     .menu{
-        // padding: 16px 0px;
-        display: none;
-        @include pad{
+        display: unset;
+        .menu-switch{
             display: none;
-        }
-        @include pc{
-            display: flex;
-        }
-        &.mobile{
-            position: relative;
-            display: flex;
-            @include pad{
+            @include phone(){
                 display: flex;
             }
-            @include pc{
-                display: none;
-            }
-            .dash-top,.dash-middle,.dash-bottom{
+            flex-direction: column;
+            gap: 4px;
+            background-color: transparent;
+            border: none;
+            padding: 6px;
+            margin-right: 0;
+            margin-left: auto;
+            cursor: pointer;
+            span{
+                display: block;
+                background-color: #fff;
                 width: 30px;
                 height: 4px;
-                background-color: #fff;
-                margin-top: 4px;
             }
-            &:hover+.collasp{
-                display: flex;
+            &:focus~ul{
+                max-height: 50vh;
+                padding: 24px 0;
             }
         }
         .list-index{
+            gap: 30px;
+            display: flex;
+            box-sizing: border-box;
+            overflow-y: hidden;
+            @include phone(){
+                position: fixed;
+                top: 0;
+                right: 0;
+                transform: translateY(62px);
+                flex-direction: column;
+                font-size: 3rem;
+                background-color: rgba(0, 0, 0, 0.3);
+                padding: 0;
+                width: 330px;
+                max-height: 0;
+                transition: max-height .4s ease,padding-top .4s ease,padding-bottom .4s ease;
+            }
             .index{
-                margin-left: 15px;
+                height: fit-content;
                 a{
                     color: #fff;
                 }
             }
-            .first{
-                margin-left: 0px;
-            }
         }
         .appointment{
-            margin: 0px 6px;
+            gap: 6px;
         }
     }
-}
-.collasp{
-    display: none;
-    background-color: rgba(0, 0, 0, 0.07);
-    position: absolute;
-    width: 100%;
-    top: 100%;
 }
 .nav.fixed{
     position: sticky;
@@ -378,6 +383,10 @@ h5{
         .caption{
             h1{
                 font-size: 110px;
+                @include phone(){
+                    font-size: 72px;
+                    word-wrap: break-word;
+                }
                 line-height: 87px;
                 font-weight: 400;
                 text-transform: uppercase;
@@ -416,25 +425,39 @@ h5{
 }
 .slider-active{
     .img01{
-        animation: moveOut 6.4s;
-        animation-delay: 3.2s;
+        animation: moveOut 10s;
+        animation-delay: 5s;
         animation-iteration-count: infinite;
+        .slider-text{
+            animation-delay: 6s;
+        }
     }
     .img02{
-        animation: moveOut 6.4s;
+        animation: moveOut 10s;
         animation-iteration-count: infinite;
+        .slider-text{
+            animation-delay: 1s;
+        }
     }
     .slider-text{
-        animation: fadeInLeft 3.2s;
+        animation: fadeInLeft 10s;
         animation-iteration-count: infinite;
     }
 }
 @keyframes fadeInLeft {
-    0%{
+    50%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    51%{
         opacity: 0;
         transform: translateX(-20px);
     }
-    25%{
+    90%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100%{
         opacity: 1;
         transform: translateX(0px);
     }
@@ -486,6 +509,9 @@ h5{
         }
         .description{
             letter-spacing: 1px;
+            span{
+                margin-inline-end: 6px;
+            }
         }
         .description + .description{
             border-top: 1px dashed #fff;
@@ -499,6 +525,10 @@ h5{
     input{
         visibility: hidden;
         position: absolute;
+    }
+    .filter{
+        flex-wrap: wrap;
+        gap: 8px;
     }
     .gallery-img-group{
         .gallery-item{

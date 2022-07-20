@@ -78,7 +78,7 @@ h5 {
   position: relative;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 767px) {
   .wrapper {
     max-width: 540px;
   }
@@ -177,7 +177,7 @@ h5 {
   max-width: 100%;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 767px) {
   .card {
     width: 100%;
     max-width: 100%;
@@ -197,7 +197,7 @@ h5 {
           flex: 0 0 100%;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 767px) {
   .gallery-item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -235,7 +235,7 @@ h5 {
           flex: 0 0 100%;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 767px) {
   .blog-item, .footer .item {
     width: 100%;
     max-width: 100%;
@@ -281,7 +281,7 @@ h5 {
           flex: 0 0 100%;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 767px) {
   .sponser-logo {
     width: 100%;
     max-width: 100%;
@@ -443,79 +443,87 @@ h5 {
 }
 
 .nav .menu {
+  display: unset;
+}
+
+.nav .menu .menu-switch {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+  margin-right: 0;
+  margin-left: auto;
+  cursor: pointer;
 }
 
-@media (min-width: 992px) {
-  .nav .menu {
-    display: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  .nav .menu {
+@media (max-width: 767px) {
+  .nav .menu .menu-switch {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.nav .menu.mobile {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (min-width: 992px) {
-  .nav .menu.mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width: 1200px) {
-  .nav .menu.mobile {
-    display: none;
-  }
-}
-
-.nav .menu.mobile .dash-top, .nav .menu.mobile .dash-middle, .nav .menu.mobile .dash-bottom {
+.nav .menu .menu-switch span {
+  display: block;
+  background-color: #fff;
   width: 30px;
   height: 4px;
-  background-color: #fff;
-  margin-top: 4px;
 }
 
-.nav .menu.mobile:hover + .collasp {
+.nav .menu .menu-switch:focus ~ ul {
+  max-height: 50vh;
+  padding: 24px 0;
+}
+
+.nav .menu .list-index {
+  gap: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+@media (max-width: 767px) {
+  .nav .menu .list-index {
+    position: fixed;
+    top: 0;
+    right: 0;
+    -webkit-transform: translateY(62px);
+            transform: translateY(62px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0;
+    width: 330px;
+    max-height: 0;
+    -webkit-transition: max-height .4s ease,padding-top .4s ease,padding-bottom .4s ease;
+    transition: max-height .4s ease,padding-top .4s ease,padding-bottom .4s ease;
+  }
 }
 
 .nav .menu .list-index .index {
-  margin-left: 15px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .nav .menu .list-index .index a {
   color: #fff;
 }
 
-.nav .menu .list-index .first {
-  margin-left: 0px;
-}
-
 .nav .menu .appointment {
-  margin: 0px 6px;
-}
-
-.collasp {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.07);
-  position: absolute;
-  width: 100%;
-  top: 100%;
+  gap: 6px;
 }
 
 .nav.fixed {
@@ -564,6 +572,13 @@ h5 {
   font-family: 'Rajdhani', sans-serif;
 }
 
+@media (max-width: 767px) {
+  .hero .slider .caption h1 {
+    font-size: 72px;
+    word-wrap: break-word;
+  }
+}
+
 .hero .slider .caption h2 {
   font-size: 2rem;
   font-weight: 400;
@@ -593,35 +608,55 @@ h5 {
 }
 
 .slider-active .img01 {
-  -webkit-animation: moveOut 6.4s;
-          animation: moveOut 6.4s;
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
+  -webkit-animation: moveOut 10s;
+          animation: moveOut 10s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.slider-active .img01 .slider-text {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
 
 .slider-active .img02 {
-  -webkit-animation: moveOut 6.4s;
-          animation: moveOut 6.4s;
+  -webkit-animation: moveOut 10s;
+          animation: moveOut 10s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 
+.slider-active .img02 .slider-text {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
 .slider-active .slider-text {
-  -webkit-animation: fadeInLeft 3.2s;
-          animation: fadeInLeft 3.2s;
+  -webkit-animation: fadeInLeft 10s;
+          animation: fadeInLeft 10s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes fadeInLeft {
-  0% {
+  50% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  51% {
     opacity: 0;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px);
   }
-  25% {
+  90% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
     opacity: 1;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
@@ -629,12 +664,22 @@ h5 {
 }
 
 @keyframes fadeInLeft {
-  0% {
+  50% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  51% {
     opacity: 0;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px);
   }
-  25% {
+  90% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
     opacity: 1;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
@@ -729,6 +774,11 @@ h5 {
   letter-spacing: 1px;
 }
 
+.pricing .card .description span {
+  -webkit-margin-end: 6px;
+          margin-inline-end: 6px;
+}
+
 .pricing .card .description + .description {
   border-top: 1px dashed #fff;
 }
@@ -740,6 +790,12 @@ h5 {
 .gallery input {
   visibility: hidden;
   position: absolute;
+}
+
+.gallery .filter {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
 }
 
 .gallery .gallery-img-group .gallery-item {

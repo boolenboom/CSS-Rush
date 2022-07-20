@@ -9,37 +9,26 @@
     <title>Pet-Landing</title>
 </head>
 <body>
-    <header class="nav">
+    <nav class="nav">
         <div class="wrapper row spaceBetween">
             <a href="index.html" class="logo">
                 <img src="img/nav/logo.png" class="white" alt="商標圖案" srcset="">
                 <img src="img/nav/logo-black.png" class="black" alt="商標圖案" srcset="">
             </a>
             <div class="menu row">
-                <ul class="list-index row vertical-center">
-                    <li id='' class="index first"><a href="index.html">Home</a></li>
+                <button class="mobile menu-switch">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="list-index vertical-center">
+                    <li id='' class="index"><a href="index.html">Home</a></li>
                     <li id='' class="index"><a href="#services">Services</a></li>
                     <li id='' class="index"><a href="#pricing">Pricing</a></li>
                     <li id='' class="index"><a href="#gallery">Review</a></li>
+                    <button class="appointment row spaceBetween vertical-center button"> <i class="gg-calendar"></i> Make An appointment</button>
                 </ul>
-                <button class="appointment row spaceBetween vertical-center button"> <i class="gg-calendar"></i> Make An appointment</button>
             </div>
-            <a class="menu mobile col">
-                <span class="dash-top"></span><span class="dash-middle"></span><span class="dash-bottom"></span>
-            </a>
-            <ul class="collasp col vertical-center">
-                <li id='' class="index first"><a href="index.html">Home</a></li>
-                <li id='' class="index"><a href="#services">Services</a></li>
-                <li id='' class="index"><a href="#pricing">Pricing</a></li>
-                <li id='' class="index"><a href="#gallery">Review</a></li>
-                <li class="index">
-                    <button class="appointment row spaceBetween vertical-center button">
-                        <i class="gg-calendar"></i> Make An appointment
-                    </button>
-                </li>
-            </ul>
         </div>
-    </header>
+    </nav>
     <section class="hero">
         <div class="slider slider-active">
             <div class="item bg-img img01 col horizontal-center" data-background="img/hero/slider-1.jpg">
